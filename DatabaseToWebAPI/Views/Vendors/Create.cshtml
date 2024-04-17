@@ -1,0 +1,73 @@
+﻿@model DatabaseToWebAPI.Models.Vendor
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>Vendor</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="VendorName" class="control-label"></label>
+                <input asp-for="VendorName" class="form-control" />
+                <span asp-validation-for="VendorName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="VendorAddress1" class="control-label"></label>
+                <input asp-for="VendorAddress1" class="form-control" />
+                <span asp-validation-for="VendorAddress1" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="VendorAddress2" class="control-label"></label>
+                <input asp-for="VendorAddress2" class="form-control" />
+                <span asp-validation-for="VendorAddress2" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="VendorCity" class="control-label"></label>
+                <input asp-for="VendorCity" class="form-control" />
+                <span asp-validation-for="VendorCity" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="VendorState" class="control-label"></label>
+                <input asp-for="VendorState" class="form-control" />
+                <span asp-validation-for="VendorState" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="VendorZipCode" class="control-label"></label>
+                <input asp-for="VendorZipCode" class="form-control" />
+                <span asp-validation-for="VendorZipCode" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="VendorPhone" class="control-label"></label>
+                <input asp-for="VendorPhone" class="form-control" />
+                <span asp-validation-for="VendorPhone" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="VendorContactLname" class="control-label"></label>
+                <input asp-for="VendorContactLname" class="form-control" />
+                <span asp-validation-for="VendorContactLname" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="VendorContactFname" class="control-label"></label>
+                <input asp-for="VendorContactFname" class="form-control" />
+                <span asp-validation-for="VendorContactFname" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

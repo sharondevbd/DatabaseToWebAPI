@@ -1,0 +1,95 @@
+﻿@model IEnumerable<DatabaseToWebAPI.Models.Vendor>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.VendorName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.VendorAddress1)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.VendorAddress2)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.VendorCity)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.VendorState)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.VendorZipCode)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.VendorPhone)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.VendorContactLname)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.VendorContactFname)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DefaultAccountNoNavigation)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DefaultTerms)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.VendorName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.VendorAddress1)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.VendorAddress2)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.VendorCity)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.VendorState)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.VendorZipCode)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.VendorPhone)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.VendorContactLname)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.VendorContactFname)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DefaultAccountNoNavigation.AccountNo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DefaultTerms.TermsId)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.VendorId">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.VendorId">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.VendorId">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
